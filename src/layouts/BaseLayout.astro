@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+import siteData from '../content/site.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = siteData.site.title, description = siteData.site.description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={siteData.site.url} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteData.site.url}${siteData.site.ogImage}`} />
+    <meta property="og:url" content={siteData.site.url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={siteData.site.locale} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteData.site.url}${siteData.site.ogImage}`} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Akademi Bilardo",
+      "description": siteData.site.description,
+      "url": siteData.site.url,
+      "telephone": siteData.contact.phoneFormatted,
+      "email": siteData.contact.email,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cumhuriyet Mahallesi Oasis AVM No:237",
+        "addressLocality": "Bodrum",
+        "addressRegion": "Muğla",
+        "postalCode": "48400",
+        "addressCountry": "TR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "image": `${siteData.site.url}${siteData.site.ogImage}`
+    })} />
+  </head>
+  <body class="bg-white">
+    <slot />
+  </body>
+</html>

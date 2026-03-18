@@ -1,0 +1,44 @@
+---
+import siteData from '../content/site.json';
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="section-title text-dark">{siteData.video.title}</h2>
+    <div class="h-1 w-16 bg-primary mx-auto mb-12 rounded-full"></div>
+
+    <!-- YouTube Facade (lazy load) -->
+    <div
+      id="youtube-facade"
+      class="relative aspect-video rounded-2xl overflow-hidden cursor-pointer group bg-dark shadow-lg"
+    >
+      <img
+        src={`https://img.youtube.com/vi/${siteData.video.youtubeId}/maxresdefault.jpg`}
+        alt="Akademi Bilardo tanıtım videosu"
+        class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
+        loading="lazy"
+        decoding="async"
+      />
+      <!-- Play Button -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors shadow-lg">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ youtubeId: siteData.video.youtubeId }}>
+  document.getElementById('youtube-facade')?.addEventListener('click', function() {
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    iframe.className = 'absolute inset-0 w-full h-full';
+    this.innerHTML = '';
+    this.appendChild(iframe);
+  });
+</script>

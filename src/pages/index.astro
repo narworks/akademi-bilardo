@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Gallery from '../components/Gallery.astro';
+import VideoSection from '../components/VideoSection.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Kitchen from '../components/Kitchen.astro';
+import Lessons from '../components/Lessons.astro';
+import Products from '../components/Products.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<BaseLayout>
+  <Header />
+
+  <main>
+    <Hero />
+    <Features />
+    <Gallery />
+    <VideoSection />
+    <Testimonials />
+    <Kitchen />
+    <Lessons />
+    <Products />
+    <Contact />
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+
+  <!-- Scroll to top button -->
+  <button
+    id="scroll-top"
+    class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-primary/80 hover:bg-primary rounded-full shadow-lg flex items-center justify-center text-white opacity-0 pointer-events-none transition-all duration-300"
+    aria-label="Sayfanın başına dön"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <script>
+    const scrollBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        scrollBtn?.classList.remove('opacity-0', 'pointer-events-none');
+        scrollBtn?.classList.add('opacity-100');
+      } else {
+        scrollBtn?.classList.add('opacity-0', 'pointer-events-none');
+        scrollBtn?.classList.remove('opacity-100');
+      }
+    });
+    scrollBtn?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</BaseLayout>

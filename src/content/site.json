@@ -1,0 +1,93 @@
+{
+  "site": {
+    "title": "Akademi Bilardo | Bodrum Bilardo Salonu - 3 Bant ve Pool",
+    "description": "Bodrum Oasis AVM'de profesyonel bilardo salonu. 3 bant ve pool masaları, özel bilardo dersleri, bilardo malzemeleri satışı ve servis. 7/24 açık.",
+    "url": "https://akademibilardo.com",
+    "locale": "tr_TR",
+    "ogImage": "/images/hero/hero.jpg"
+  },
+  "contact": {
+    "phone": "0533 055 17 73",
+    "phoneFormatted": "+905330551773",
+    "phonePerson": "Poyraz Pamuk",
+    "email": "oasisbowlingbilardo@gmail.com",
+    "whatsapp": "905330551773",
+    "hours": "7/24 Açığız",
+    "address": "Cumhuriyet Mahallesi Oasis AVM No:237, 48400 Bodrum/Muğla"
+  },
+  "hero": {
+    "title": "Akademi Bilardo",
+    "subtitle": "Bodrum'da bilardonun tek adresi",
+    "description": "Oasis AVM'de 7/24 hizmetinizdeyiz",
+    "cta": "Bize Ulaşın"
+  },
+  "features": {
+    "title": "Masalarımız",
+    "items": [
+      {
+        "title": "3 Bant",
+        "description": "3 adet profesyonel 3 bant masamızın periyodik bakımları düzenli olarak yapılmaktadır.",
+        "image": "/images/3bant/3bant-01.jpg"
+      },
+      {
+        "title": "Pool",
+        "description": "5 adet profesyonel pool masamız ile hizmet vermekteyiz.",
+        "image": "/images/pool/pool-01.jpg"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Salonumuzdan",
+    "images": [
+      { "src": "/images/pool/pool-01.jpg", "alt": "Akademi Bilardo pool masaları" },
+      { "src": "/images/3bant/3bant-02.jpg", "alt": "3 bant bilardo masası" },
+      { "src": "/images/3bant/3bant-01.jpg", "alt": "Profesyonel 3 bant bilardo" },
+      { "src": "/images/pool/pool-02.jpg", "alt": "Pool bilardo alanı" },
+      { "src": "/images/salon/salon-01.jpg", "alt": "Akademi Bilardo salon görünümü" },
+      { "src": "/images/3bant/3bant-03.jpg", "alt": "3 bant bilardo yakın çekim" }
+    ]
+  },
+  "video": {
+    "title": "Basından",
+    "youtubeId": "zzq3OhJbBLY"
+  },
+  "testimonials": {
+    "title": "Ziyaretçilerimizden",
+    "items": [
+      {
+        "name": "Yaşar Kefeli",
+        "text": "Bodrum'un en iyi bilardo salonu. Masaların bakımı mükemmel, ortam çok temiz ve düzenli. Her geldiğimde keyifle oynuyorum."
+      },
+      {
+        "name": "İlhan Şeşen",
+        "text": "Profesyonel masalar ve samimi bir atmosfer. Hasan usta'nın bilgisi ve ilgisi sayesinde oyunum çok gelişti. Kesinlikle tavsiye ederim."
+      },
+      {
+        "name": "Semih Saygıner",
+        "text": "Bodrum'da bu kalitede bir bilardo salonu bulmak gerçekten güzel. 3 bant masaları turnuva standartlarında. Bilardo severlere gönül rahatlığıyla önerebilirim."
+      }
+    ]
+  },
+  "kitchen": {
+    "title": "Mutfağımızdan",
+    "description": "Günlük ev yemeklerimiz vardır. Bilardo keyfinizi tamamlayacak lezzetli yemekler ve içecekler ile hizmetinizdeyiz.",
+    "image": "/images/food/food-01.jpg"
+  },
+  "lessons": {
+    "title": "Özel Bilardo Dersleri",
+    "description": "Bilardo öğrenmek veya mevcut seviyenizi geliştirmek istiyorsanız, usta oyuncu Hasan Pamuk'tan birebir özel dersler alabilirsiniz. Detaylı bilgi için lütfen bizimle iletişime geçin.",
+    "formButton": "Gönder"
+  },
+  "products": {
+    "title": "Bilardo Malzemeleri Satışı ve Servis Hizmetleri",
+    "subtitle": "Ürünler hakkında detaylı bilgi için lütfen bizimle iletişime geçin.",
+    "items": [
+      { "title": "İstakalar", "image": "/images/products/isteka.jpg" },
+      { "title": "Tebeşirler", "image": "/images/products/tebesir.jpg" },
+      { "title": "Eldiven", "image": "/images/products/eldiven.webp" },
+      { "title": "Bilardo Masası Satış ve Bakım", "image": "/images/products/masa.jpg" },
+      { "title": "Çuha Satış ve Montaj", "image": "/images/products/cuha.jpg" },
+      { "title": "İstaka Ucu Satış ve Montaj", "image": "/images/products/kamui.jpg" }
+    ]
+  }
+}
