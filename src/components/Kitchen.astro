@@ -1,0 +1,32 @@
+---
+import siteData from '../content/site.json';
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image -->
+      <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
+        <img
+          src={siteData.kitchen.image}
+          alt="Akademi Bilardo mutfak - günlük ev yemekleri"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <!-- Content -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">{siteData.kitchen.title}</h2>
+        <div class="h-1 w-16 bg-primary mb-8 rounded-full"></div>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          {siteData.kitchen.description}
+        </p>
+        <a href="#iletisim" class="btn-primary">
+          Detaylı Bilgi
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

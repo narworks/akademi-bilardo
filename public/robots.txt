@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akademibilardo.com/sitemap-index.xml

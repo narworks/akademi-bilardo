@@ -1,0 +1,23 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-dark text-gray-400 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="/images/logo.png" alt="Akademi Bilardo" class="h-8 w-8 rounded-full object-cover" />
+        <span class="text-white font-medium">Akademi Bilardo</span>
+      </div>
+      <nav class="flex gap-6 text-sm">
+        <a href="#salon" class="hover:text-white transition-colors">Salonumuz</a>
+        <a href="#dersler" class="hover:text-white transition-colors">Dersler</a>
+        <a href="#urunler" class="hover:text-white transition-colors">Ürünler</a>
+        <a href="#iletisim" class="hover:text-white transition-colors">İletişim</a>
+      </nav>
+      <p class="text-sm">
+        &copy; {currentYear} Akademi Bilardo - Tüm Hakları Saklıdır.
+      </p>
+    </div>
+  </div>
+</footer>
